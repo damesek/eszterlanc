@@ -8,3 +8,4 @@
   (GUI/init))
 
 
+(init)

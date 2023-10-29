@@ -12,21 +12,36 @@ The toolkit called magyarlanc aims at the basic linguistic processing of Hungari
 This clojure library named about a poem or song titled "Lánc, lánc, eszterlánc" appears to be a traditional Hungarian children's song or (chain based) game. Just4brave people: https://www.youtube.com/watch?v=NJJLEW17oBQ.
 :) 
 
-Goal: better interface than official commandline, for example:
+### Reasons for creating this:
+- It surpasses alternatives like Snowball, HunSpell, and StanfordNLP, which have an accuracy range of 50-70%.
+- Enables seamless integration with Clojure.
+- GenAI Solutions (sometimes) required Syntactic Approaches
+
+Official commandline example:
 ```bash
 java -Xmx2G -jar magyarlanc-3.0.jar -mode depparse -input in.txt -output out.txt -encoding ISO-8859-2
 ```
 
-## Todo
-
-WIP 
-
-- Clojars
-
 ## Usage
 
-### Init
-todo:clojars
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.baader/eszterlanc.svg)](https://clojars.org/org.clojars.baader/eszterlanc)
+
+Leiningen:
+
+```angular2html
+[org.clojars.baader/eszterlanc "0.3.0"]
+```
+
+Clojure CLI/deps.edn
+
+```angular2html
+org.clojars.baader/eszterlanc {:mvn/version "0.3.0"}
+```
+[:BR]
+
+## Init (important!)
+
+### Using this repository
 
 If you would like to use this repository, do you need to download magyarlanc-3.0.jar file from https://rgai.inf.u-szeged.hu/magyarlanc site and add to the lib folder.
 
@@ -43,6 +58,26 @@ If you would like to use this repository, do you need to download magyarlanc-3.0
 ├── lib
 │   └── magyarlanc-3.0.jar <<<------------ put here the jar file
 ```
+
+### Using via Clojars (maven)
+
+!! That is important, because the file is too large. I can't upload to Clojars.
+
+Do you need to download from https://drive.google.com/file/d/1AUcEjCgVqAVXPTqEzXAuSXgx10GDyxYx/view?usp=sharing the magyarlanc-3.0.zip file.
+Do you need to unzip to "src/java" folder and add to project.clj the source. Example:
+
+```clojure 
+(defproject eszterlanc-test "0.1.0-SNAPSHOT"
+            :description "FIXME: write description"
+            :url "http://example.com/FIXME"
+            :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
+                      :url "https://www.eclipse.org/legal/epl-2.0/"}
+            :dependencies [[org.clojure/clojure "1.11.1"]
+                           [org.clojars.baader/eszterlanc "0.3.0"]]
+            :java-source-paths ["src/java"]
+            :repl-options {:init-ns eszterlanc-test.core})
+```
+Test repository: https://github.com/damesek/eszterlanc-test
 
 ## GUI
 
