@@ -151,10 +151,10 @@ which was built on the resource morphdb.hu.
 
 ### Dependency
 
-"https://code.google.com/archive/p/mate-tools/
+https://code.google.com/archive/p/mate-tools/
 Tools for Natural Language Analysis
 adapted to Hungarian
-Input: array"
+Input: array
 
 ```clojure 
 (dependency sentences-array)
