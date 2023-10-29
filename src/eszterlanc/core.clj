@@ -71,7 +71,7 @@
     (object->clj (.parseSentence (MyBerkeleyParser/getInstance) sentence))))
 
 
-(defn eszterlanc [sentences-array]
+(defn magyarlanc [sentences-array]
   "Magyarlanc Clojure verzio.
    Mindent visszad: morph, dependencia, konstituens."
   (map (fn [sentence]

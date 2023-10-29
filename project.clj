@@ -6,4 +6,6 @@
   :dependencies [[org.clojure/clojure "1.11.1"]]
   :java-source-paths ["src/java"]
   :resource-paths ["lib/magyarlanc-3.0.jar"]
+  :profiles {:kaocha {:dependencies [[lambdaisland/kaocha "1.87.1366"]]}}
+  :aliases {"kaocha" ["with-profile" "+kaocha" "run" "-m" "kaocha.runner"]}
   :repl-options {:init-ns eszterlanc.core})

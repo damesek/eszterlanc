@@ -159,7 +159,7 @@ adapted to Hungarian
 Input: array
 
 ```clojure 
-(dependency sentences-array)
+(e/dependency sentences-array)
 =>
 ([["1" "Két" "két" "NUM" "Case=Nom|NumType=Card|Number=Sing" "2" "ATT"]
   ["2" "folyó" "folyó" "NOUN" "Case=Nom|Number=Sing" "3" "ATT"]
@@ -216,7 +216,7 @@ adapted to Hungarian
 Input: array
 
 ```clojure 
-(constituency sentences-array)
+(e/constituency sentences-array)
 =>
 ((["Két" "két" "NUM" "Case=Nom|NumType=Card|Number=Sing" "(ROOT(CP(NP(NP*"]
   ["folyó" "folyó" "NOUN" "Case=Nom|Number=Sing" "*)"]
@@ -271,14 +271,14 @@ This can be misleading, may require further checking.
 E.g. spell checking
 
 ```clojure 
-(lemma-for-word "baglyokat")
+(e/lemma-for-word "baglyokat")
 => "bagoly"
 ```
 
 ### Access to all magyarlanc
 
 ```clojure 
-(eszterlanc sentences-array)
+(e/magyarlanc sentences-array)
 =>
 ({:morph (["Két" "két" "NUM" "Case=Nom|NumType=Card|Number=Sing"]
           ["folyó" "folyó" "NOUN" "Case=Nom|Number=Sing"]
