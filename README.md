@@ -30,6 +30,8 @@ WIP
 ### Init
 todo:clojars
 
+If you would like to use this repository, do you need to download magyarlanc-3.0.jar file from https://rgai.inf.u-szeged.hu/magyarlanc site.
+
 ```clojure 
 (require '[eszterlanc.core :as e])
 ```
