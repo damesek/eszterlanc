@@ -37,7 +37,6 @@ Clojure CLI/deps.edn
 ```angular2html
 org.clojars.baader/eszterlanc {:mvn/version "0.3.0"}
 ```
-[:BR]
 
 ## Init (important!)
 
