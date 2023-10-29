@@ -3,21 +3,28 @@
             [eszterlanc.core :refer :all]))
 
 
-;; todo: nil case, different type, single sentence
+;; todo: nil case, different type
 
 (def test-sentences
   "Kezdetben teremté Isten az eget és a földet. A föld pedig kietlen és puszta vala,
   és setétség vala a mélység színén, és az Isten Lelke lebeg vala a vizek felett.")
 
+(def single-sentence
+  "Kezdetben teremté Isten az eget és a földet.")
+
 
 (deftest eszterlanc-core-tests
-  (let [sa (sentence-array test-sentences)]
+  (let [sa (sentence-array test-sentences)
+        sa-single (sentence-array single-sentence)]
     (testing "Test sentence-array we get java object"
       (is (= (Class/forName "[[Ljava.lang.String;")
              (type sa))))
     (testing "With object->clj we get the right format"
       (is (= "Kezdetben"
-             (->> sa object->clj ffirst))))))
+             (->> sa object->clj ffirst))))
+    (testing "With object->clj and with single sentence"
+      (is (= "Kezdetben"
+             (->> sa-single object->clj ffirst))))))
 
 
 (deftest parser-tests
@@ -48,11 +55,8 @@
              (->> sa constituency first))))))
 
 
-
 (deftest lemmatization-tests
   (testing "With words the lemmatization"
     (is (= "bagoly" (lemma-for-word "baglyokat")))
     (is (= "terem" (lemma-for-word "teremté")))))
-
-
 

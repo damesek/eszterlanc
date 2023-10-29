@@ -22,15 +22,43 @@ java -Xmx2G -jar magyarlanc-3.0.jar -mode depparse -input in.txt -output out.txt
 WIP 
 
 - Clojars
-- Tests
-- Demo UI
 
 ## Usage
 
 ### Init
 todo:clojars
 
-If you would like to use this repository, do you need to download magyarlanc-3.0.jar file from https://rgai.inf.u-szeged.hu/magyarlanc site.
+If you would like to use this repository, do you need to download magyarlanc-3.0.jar file from https://rgai.inf.u-szeged.hu/magyarlanc site and add to the lib folder.
+
+```bash
+.
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── bin
+│   └── kaocha
+├── doc
+│   └── intro.md
+├── eszterlanc.iml
+├── lib
+│   └── magyarlanc-3.0.jar <<<------------ put here the jar file
+```
+
+## GUI
+
+### Access to GUI
+
+```clojure 
+(require '[eszterlanc.gui :as [gui]])
+
+(gui/init)
+```
+![GUI init](resources/gui.png)
+
+
+## FUNCTIONS
+
+### Init
 
 ```clojure 
 (require '[eszterlanc.core :as e])
