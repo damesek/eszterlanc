@@ -93,5 +93,5 @@
        (java.util.Arrays/asList)
        first second))
 
-
-
+(= '(:morph :dep :kons)
+(->> (magyarlanc (sentence-array test-text))  first keys))

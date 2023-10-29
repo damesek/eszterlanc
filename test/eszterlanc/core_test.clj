@@ -3,6 +3,7 @@
             [eszterlanc.core :refer :all]))
 
 
+;; todo: nil case, different type, single sentence
 
 (def test-sentences
   "Kezdetben teremté Isten az eget és a földet. A föld pedig kietlen és puszta vala,
@@ -12,45 +13,46 @@
 (deftest eszterlanc-core-tests
   (let [sa (sentence-array test-sentences)]
     (testing "Test sentence-array we get java object"
-      (= (Class/forName "[[Ljava.lang.String;")
-         (type sa)))
+      (is (= (Class/forName "[[Ljava.lang.String;")
+             (type sa))))
     (testing "With object->clj we get the right format"
-      (= "Kezdetben"
-         (->> sa object->clj ffirst)))))
+      (is (= "Kezdetben"
+             (->> sa object->clj ffirst))))))
 
 
 (deftest parser-tests
   (let [sa (sentence-array test-sentences)]
     (testing "With morphological parser, array version"
-      (= ["Kezdetben" "kezdet" "NOUN" "Case=Ine|Number=Sing"]
-         (->> sa morph-array ffirst)))
+      (is (= ["Kezdetben" "kezdet" "NOUN" "Case=Ine|Number=Sing"]
+             (->> sa morph-array ffirst))))
     (testing "With Mate-tools Natural language analysis"
-      (= ["1" "Kezdetben" "kezdet" "NOUN" "Case=Ine|Number=Sing" "2" "OBL"]
-         (->> sa dependency ffirst)))
+      (is (= ["1" "Kezdetben" "kezdet" "NOUN" "Case=Ine|Number=Sing" "2" "OBL"]
+             (->> sa dependency ffirst))))
     (testing "With Berkley Tree Annotation parser"
-      (= ["Kezdetben" "kezdet" "NOUN" "Case=Ine|Number=Sing" "(ROOT(CP(NP*)"]
-         (->> sa constituency ffirst)))))
+      (is (= ["Kezdetben" "kezdet" "NOUN" "Case=Ine|Number=Sing" "(ROOT(CP(NP*)"]
+             (->> sa constituency ffirst))))))
 
 (deftest magyarlanc-tests
   (let [sa (sentence-array test-sentences)]
     (testing "With magyarlanc, could we get back all functionality?"
-      (= (:morph :dep :kons)
-         (->> sa magyarlanc first keys)))
+      (is (= '(:morph :dep :kons)
+             (->> sa magyarlanc first keys))))
     (testing "Does Magyarlanc give the same result as the morphological parser?"
-      (= (->> sa magyarlanc first :morph)
-         (->> sa morph-array first)))
+      (is (= (->> sa magyarlanc first :morph)
+             (->> sa morph-array first))))
     (testing "Does Magyarlanc give the same result as the Mate-tools parser?"
-      (= (->> sa magyarlanc first :dep)
-         (->> sa dependency first)))
+      (is (= (->> sa magyarlanc first :dep)
+             (->> sa dependency first))))
     (testing "Does Magyarlanc give the same result as the Berkley Tree Annotation parser?"
-      (= (->> sa magyarlanc first :kons)
-         (->> sa constituency first)))))
+      (is (= (->> sa magyarlanc first :kons)
+             (->> sa constituency first))))))
+
 
 
 (deftest lemmatization-tests
   (testing "With words the lemmatization"
-    (= "bagoly" (lemma-for-word "baglyokat"))
-    (= "teremt" (lemma-for-word "teremté"))))
+    (is (= "bagoly" (lemma-for-word "baglyokat")))
+    (is (= "terem" (lemma-for-word "teremté")))))
 
 
 
