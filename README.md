@@ -58,6 +58,14 @@ If you would like to use this repository, do you need to download magyarlanc-3.0
 
 ## FUNCTIONS
 
+- [**lemma-for-word**](https://github.com/damesek/eszterlanc#lemma-for-word): get a word lemma
+- [**sentence-array**](https://github.com/damesek/eszterlanc#sentences-into-arrays): split strings into sentence arrays
+- [**object->clj**](https://github.com/damesek/eszterlanc#helper-object-clj): helper-fn
+- [**morphology**](https://github.com/damesek/eszterlanc#morphology): Morphological parser (from/via morphdb.hu) 
+- [**dependency**](https://github.com/damesek/eszterlanc#dependency): Google Mate-tools Analysis adapted to Hungarian
+- [**constituency**](https://github.com/damesek/eszterlanc#constituency): Berkley parser adapted to Hungarian
+- [**magyarlanc**](https://github.com/damesek/eszterlanc#access-to-all-magyarlanc): Magyarlanc funcionality (all-in-one)
+
 ### Init
 
 ```clojure 
@@ -451,6 +459,18 @@ E.g. spell checking
          ["öröme" "öröm" "NOUN" "Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3" "*))"]
          ["." "." "PUNCT" "_" "*))"])})
 ```
+
+
+
+## Tests
+
+Tests can be run with kaocha:
+
+```bash
+./bin/kaocha --watch
+```
+
+
 
 ## Magyarlanc pages
 
