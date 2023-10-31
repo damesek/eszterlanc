@@ -77,6 +77,11 @@ In project.clj, please add the Java source path.
 ```
 ![GUI init](resources/gui.png)
 
+GUI namespace functions:
+
+- [**save-image-berkley**](): on the picture, the right graph
+- [**save-image-whatswrong**](): on the picture, the left graph
+- [**save-image-to-resources**](): save both image
 
 ## FUNCTIONS
 
@@ -482,7 +487,45 @@ E.g. spell checking
          ["." "." "PUNCT" "_" "*))"])})
 ```
 
+### Save image Berkley
 
+Retrieves a visual representation of the parsed sentence using the
+`get-buffered-image` function and saves it as a PNG image to the specified path.
+
+```clojure
+(require '[eszterlanc.gui :as gui])
+
+(gui/save-image-berkley "Ez egy teszt, amit nagyon jó lett." "temp.png")
+```
+
+![save-image-berkley](temp.png)
+
+### Save image whatswrong
+
+Retrieves a visual representation of the parsed sentence using the
+`get-image-from-bytes` function and saves it as a PNG image to the specified path.
+
+```clojure
+(save-image-whatswrong "Ez egy teszt, amit nagyon jó lett." "temp-w.png")
+```
+
+![save-image-whatswrong](temp-w.png)
+
+
+
+### Save image to resources 
+
+Save both image export with one call.
+Obtains two visual representations of the parsed sentence: one via
+`get-buffered-image` and another via `get-image-from-bytes`. Both images are
+saved as PNG files in the specified directory with distinct filenames
+(`image-berkley.png` and `image-whatswrong.png`).
+
+```clojure 
+(save-image-to-resources "Ez egy teszt, amit nagyon jó lehetett volna."
+                         "resources/magyarlanc-exported-images/")
+```
+        
 
 ## Tests
 
