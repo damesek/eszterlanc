@@ -1,0 +1,33 @@
+﻿# Start standard fixups.  Don't change these.
+#
+# Convert Gate format named entities to Monk format named entities (TEI P4 format).
+#
+<Date>	<rs type="date">
+<Location>	<rs type="location">
+<Money>	<rs type="money">
+<Organization>	<rs type="organization">
+<Person>	<rs type="person">
+<Time>	<rs type="time">
+<Literary>	<rs type="literary">
+</Date>|</Location>|</Money>|</Organization>|</Person>|</Time>|</Literary>	</rs>
+#
+# End standard fixups.
+#
+<rs type="location">Col.</rs>(\s)(\p{Upper}.*?)(\W)	<rs type="person">Col. $1$2</rs>$3
+<rs type="location">Col.</rs>(\s\p{Lower}.*?\W)	<rs type="person">Col.</rs>$1
+<rs type="organization">poor</rs>	poor
+<hi><rs type="person">(\w*)</rs></hi>(\s*)<rs type="person">(\w*)</rs>	<rs name="person"><hi>$1</hi>$2$3</rs>
+<hi><rs type="person">(\w*)</rs></hi>(\s*)<rs type="location">(\w*)</rs>	<rs name="person"><hi>$1</hi>$2$3</rs>
+<hi rend="(.*)"><rs type="person">(\w*)</rs></hi>(\s*)<rs type="person">(\w*)</rs>	<rs name="person"><hirend="$1">$2</hi>$3$4</rs>
+<hi rend="(.*)"><rs type="person">(\w*)</rs></hi>(\s*)<rs type="location">(\w*)</rs>	<rs name="person"><hi rend="$1">$2</hi>$3$4</rs>
+<rs type="person">(.*)</rs>(\s+)of(\s+)<rs type="location">(.*)</rs>	<rs type="person">$1$2of$3$4</rs>
+<rs type="person">(.*)</rs>(\s+)of(\s+)the(\s+)<rs type="location">(.*)</rs>	<rs type="person">$1$2of$3the$4$5</rs>
+Lord of <rs type="location">(.*)</rs>	<rs type="person">Lord of $1</rs>
+Lord of the <rs type="location">(.*)</rs>	<rs type="person">Lord of the $1</rs>
+<rs type="person">Monsieur L</rs>'Abbé	<rs type="person">Monsieur L'Abbé</rs>
+<rs type="person">(.*)</rs>(\s*)St(\s+)(\w*)	<rs type="person">$1$2St$3$4</rs>
+<rs type="person">(.*)</rs>(\s*)St.(\s+)(\w*)	<rs type="person">$1$2St.$3$4</rs>
+<rs type="person">(.*)</rs>(\s*)the(\s*)<rs type="person">(.*)</rs>	<rs type="person">$1$2the$3$4</rs>
+<rs type="person">de</rs>	de
+<rs type="person">General Preface</rs>	General Preface
+<rs type="location">Old</rs>	Old

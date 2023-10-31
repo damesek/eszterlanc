@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>
+StripWordAttributes.
+</title>
+</head>
+<body>
+<p>
+Create derived MorphAdorner file with word elements stripped of attributes.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.stripwordattributes.StripWordAttributes input.xml output.xml output.tab [/[no]id] [/[no]trim]
+</pre>
+</blockquote>
+<table>
+<tr>
+<td>input.xml</td><td>Input MorphAdornerd xml file.</td>
+</tr>
+<tr>
+<td>output.xml</td>
+<td>Derived adorned file with word element attributes stripped.</td>
+<tr>
+<td>output.tab</td>
+<td>Tab delimited file of word element attribute values. </td>
+</tr>
+<tr>
+<td>/id or /noid</td>
+<td>Optional parameter indicating xml:id should be left attached
+to each word (&lt;w&gt;) element.   Default is /noid which removes the
+xml:id attribute and value.</td>
+</tr>
+<tr>
+<td>/trim or /notrim</td>
+<td>Optional parameter indicating whether whitespace
+should be trimmed from the start and end of each XML text line.
+Default is /notrim, which leaves the original whitespace intact.</td>
+</tr>
+</table>
+<p>
+The derived adorned output file "output.xml"  has all attributes
+stripped from each &lt;w&gt; tag.
+</p>
+<p>
+The attribute values for each "&lt;w&gt;" element in the input.xml file
+are extracted and output to the tab-separated values output.tab file.
+The order of the attribute lines matches the order of appearance
+of the &lt;w&gt; elements in the XML output file.   When /id is used, the
+xml:id value in each &lt;w&gt; element in output.xml can be matched
+with the corresponding xml:id value in output.tab .
+</p>
+<p>
+The first line in output.tab contains the attribute names for
+each column.  Each subsequent line in the output.tab file contains
+at least the following information corresponding to a single word
+"&lt;w&gt;" element.  Some adorned files may add extra
+word attributes,  resulting in more columns.
+</p>
+<ol>
+<li>xml:id -- the permanent word ID.</li>
+<li>eos -- the end of sentence flag (1 if word ends a sentence, 0 otherwise)
+</li>
+<li>lem -- the lemma.</li>
+<li>ord -- the word ordinal within the text (starts at 1)</li>
+<li>part --  the word part flag.  "N" for a word which is not split;
+"I" for the first part of a split word; "M" for the middle
+parts of a split word; and "F" for the final part of a split word.
+    </li>
+<li>pos -- the part of speech.</li>
+<li>reg -- the standard spelling.</li>
+<li>spe -- the corrected original spelling.</li>
+<li>tok -- The original token.</li>
+</ol>
+</body>
+</html>
+

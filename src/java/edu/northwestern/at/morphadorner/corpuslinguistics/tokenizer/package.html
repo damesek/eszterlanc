@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>
+Overview of tokenizer package.
+</title>
+</head>
+<body>
+
+<h3>
+Text tokenization.
+</h3>
+
+<p>
+Extracting words and sentences from a text are fundamental operations
+required by other language processing functions. Word tokenization splits a
+text into words and punctuation marks. Sentence splitting assembles the
+tokenized text into sentences.
+</p>
+
+<p>
+The first step in word tokenization is recognizing word boundaries. The
+tokenizer uses white space such as blanks and tabs as the primary cue for
+splitting the text into tokens. Punctuation marks are split from the
+initial tokens. This is not as easy as it sounds. For example, when should
+a token containing a hypen be split into two or more tokens? When does a
+period indicate the end of an abbreviation as opposed to a sentence or a
+number or a Roman numeral? Sometimes a period can act as a sentence
+terminator and an abbreviation terminator at the same time. When should a
+single quote be split from a word? Early modern English included many
+contractions such as 'tis with a leading quote.
+</p>
+
+<p>
+MorphAdorner's tokenizers use a number of heuristics and a list of
+common abbreviations to produce a sequence of punctuation and spellings
+that will be consistent with the subsequent operations of sentence boundary
+identification, part of speech tagging, and lemmatization. Different part
+of speech tag sets may require different tokenization. The Penn Treebank
+tag set assumes contractions should be split into separate tokens. Thus the
+token can't appears as two tokens, can and 't. The NUPOS tag set can work
+with tokens split this way, but at present we prefer to keep contracted
+forms as a single token. MorphAdorner includes tokenizers for each
+approach.
+</p>
+
+<p>
+Even when the text has been more-or-less correctly tokenized the
+individual tokens may still be erroneous. The digital text of many Early
+Modern English works was created using scanners and optical character
+recognition (OCR) software. Such digitized text frequently contains all
+manner of orthographic errors. Example include substitution of "~" for the
+letters "m" or "n" and mapping of the archaic long "s" as the letter "f".
+Some of these errors can be corrected automatically using heuristics and a
+spelling standardizer.
+</p>
+
+<p>
+In the print world, a punctuation mark does not count as a word.
+Instead punctuation separates groups of words. In computer terms,
+punctuation is a kind of "meta-data", not so qualitatively different from
+SGML or XML markup. MorphAdorner's word tokenizers treat punctuation marks
+as words. This procedure is justified because the punctuation "meta-data"
+added by authors (or editors) lives at the same level of data as the words
+and allows a consistent treatment of token transition probabilities for
+adornment processes such as part of speech tagging.
+</p>
+
+<p>
+All MorphAdorner word tokenizers must implement the
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.tokenizer.WordTokenizer}
+interface.  The
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.tokenizer.WordTokenizerFactory}
+provides the mechanism for instantiating a default or specified instance
+of a WordTokenizer implementation.
+The {@link edu.northwestern.at.morphadorner.corpuslinguistics.tokenizer.AbstractWordTokenizer}
+serves as a base class for deriving concrete implementations of
+word tokenizers.
+</p>
+
+<p>
+MorphAdorner word tokenizers may want to preprocess the text to regularize
+white space or perform other operations before splitting the text
+into tokens.  A word tokenizer can use invoke a class implementing the
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.tokenizer.PreTokenizer}
+interface for this purpose.  The
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.tokenizer.PreTokenizerFactory}
+instantiates a default or specified instance of a Pretokenizer implementation.
+The {@link edu.northwestern.at.morphadorner.corpuslinguistics.tokenizer.AbstractPreTokenizer}
+serves as a base class for deriving concrete implementations of
+pretokenizers.
+</p>
+
+</body>
+</html>
+

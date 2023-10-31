@@ -1,0 +1,29 @@
+#!/bin/bash
+
+####################################################
+#                                                  #
+# Download magyarlanc lib and add to this project. #
+#                                                  # 
+####################################################
+
+# Set the URL and target directory
+URL="https://eszterlanc.s3.amazonaws.com/magyarlanc-3_0.zip"
+TARGET_DIR="src/java"
+
+# Create the target directory if it doesn't exist
+mkdir -p $TARGET_DIR
+
+# Navigate to the target directory
+cd $TARGET_DIR
+
+# Download the file using wget
+wget --progress=bar:force -c $URL
+
+# Unzip the downloaded file
+unzip magyarlanc-3_0.zip
+
+# Optionally, remove the zip file after extraction
+rm magyarlanc-3_0.zip
+
+echo "Download and extraction complete."
+

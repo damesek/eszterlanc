@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>
+adornedtosketch package.
+</title>
+</head>
+<body>
+
+<p class="justpar">
+AdornedToSketch converts one or more adorned files to the verticalized
+input required by the Sketch or NoSketch corpus search engines.
+</p>
+
+<p>
+Usage:
+</p>
+
+<blockquote>
+<p>
+<code>
+adornedtosketch sketchinput.txt corpusname adorned1.xml adorned2.xml ...
+</code>
+</p>
+</blockquote>
+
+<p>
+where
+</p>
+
+<ul>
+<li><strong>sketchinput.txt</strong> specifies the output filename of
+    the verticalized representation required for input to the
+    Sketch or NoSketch engines.
+    </li>
+<li><strong>corpusname</strong> specifies the corpus name to be used
+    when creating the Sketch engine input.
+    </li>
+<li><strong>adorned1.xml adorned2.xml ...</strong> specifies the input
+    MorphAdorned XML files from which to produce the Sketch engine
+    input.
+    </li>
+</ul>
+
+<p class="justpar">
+Known flaw: AdornedToSketch does not generate the "glue" elements which
+bind punctuation marks to word tokens.
+Searching the corpus still works fine in the Sketch or NoSketch engine,
+but the punctuation marks are displayed detached from any token to which
+they would normally be attached.
+</p>
+
+</body>
+</html>

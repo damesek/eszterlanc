@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>
+CompareStringCounts.
+</title>
+</head>
+<body>
+<p>
+Compare string counts in two files using Dunning's log-likelihood.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.comparestringcounts.CompareStringCounts analysis.tab reference.tab
+</pre>
+</blockquote>
+<p>
+analysis.tab -- Input tab-separated file of strings and counts
+for an analysis text.<br />
+reference.tab -- Input tab-separated file of strings and counts
+for a reference text.<br />
+</p>
+
+<p>
+The analysis.tab and reference.tab files contain strings and
+counts of those strings compiled from two texts or corpora.
+Both files contain two tab-separated columns.
+The first column is a string.
+The second column contains the count of the number
+of times that string occurred in the associated text.
+</p>
+
+<p>
+The output contains seven tab-separated columns,
+sorted in descending order by log-likelihood value.
+One line of output appears for each string in the
+analysis text.
+</p>
+
+<ol>
+<li>
+The first column contains the string.  This may be
+a spelling, a lemma, a part of speech, a spelling bigram,
+or any other string of interest.
+</li>
+
+<li>
+The second column contains a "+" when the string is overused in
+the analysis text with respect to the reference text, a "-" when the
+string is underused, and a blank when the string is used the same
+amount in both texts.
+</li>
+
+<li>
+The third column contains Dunning's log-likelihood value.
+</li>
+
+<li>
+The fourth column shows the relative frequency of occurrence of the string
+in the analysis text as fractional parts per ten thousand.
+</li>
+
+<li>
+The fifth column shows the relative frequency of occurrence of the string in
+the reference text as fractional parts per ten thousand.
+</li>
+
+<li>
+The sixth column shows the number of times the string
+occurred in the analysis text.
+</li>
+
+<li>
+The seventh column shows the number of times the string
+occurred in the reference text.
+</li>
+
+</ol>
+<p>
+These results are written to the standard output file which can be
+redirected to another file.  A brief summary of the analysis is written
+to the standard error file.
+</p>
+</body>
+</html>
+

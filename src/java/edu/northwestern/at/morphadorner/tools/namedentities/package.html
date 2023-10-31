@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>
+NamedEntities.
+</title>
+</head>
+<body>
+<p>
+AdornWithNamedEntities adorns texts with named entities such as person,
+location, time, date, and organization.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.namedentities.AdornWithNamedEntities outputdirectory input1.xml input2.xml ...
+</pre>
+</blockquote>
+<p>
+outputdirectory -- output directory to receive xml files adorned with named entities.<br />
+input*.xml -- input TEI XML files.<br />
+</p>
+<p>
+Note:  The named entity adorner does not always recognize entities which cross soft tags.
+Thus "<hi>Emma</hi> Woodhouse" may be recognized as two separate entities.
+AdornedWithNamedEntities should be run on the input files before their
+submission to MorphAdorner.
+</p>
+</body>
+</html>
+

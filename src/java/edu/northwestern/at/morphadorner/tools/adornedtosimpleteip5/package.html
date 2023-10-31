@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+adornedtosimpleteip5 package.
+</title>
+</head>
+<body>
+<p>
+AdornedToSimpleTEIP5 converts a base-level MorphAdorner file to a
+more TEI P5-like format.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.adornedtosimpleteip5.adornedtosimpleteip5 outputdirectory adorned1.xml adorned2.xml ...
+</pre>
+</blockquote>
+
+<p>
+where <strong>outputdirectory</strong> is the output directory containing
+the resultant simplified adorned XML files and adorned*.xml are the input 
+adorned XML files.
+</p>
+
+<p class="justpar">
+When adding adornments to a TEI XML file, MorphAdorner adds attributes
+with the morphological adornments to each &lt;w&gt; and &lt;pc&gt; 
+element.  These attributes are not part of the standard TEI P5 
+specification.  
+</p>
+
+<p class="justpar">
+AdornedToSimpleTEIP5 removes all of the non-standard attributes except
+the <em>reg=</em> attribute.  The part of speech <em>pos=</em> attribute
+is mapped to the <em>ana=</em>attribute, and a "#" is prefixed to the
+part of speech tag.  The lemma <em>lem=</em> attribute is mapped to the
+<em>lemma=</em> attribute.  These are standard TEI P5 attributes.
+</p>
+
+<p class="justpar">
+The non-standard <em>reg=<em> attribute which specifies the standard
+spelling is left as is.  
+</p>
+
+<p class="justpar">
+The MorphAdorner release materials include a modified TEI P5 RNG 
+scheme file which adds the non-standard word-level attributes so
+that adorned files can be verified using standard XML processing
+software.
+</p>
+
+</body>
+</html>

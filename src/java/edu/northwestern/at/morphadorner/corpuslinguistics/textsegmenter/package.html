@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+Overview of text segmenter package.
+</title>
+</head>
+<body>
+<h3>
+Text Segmentation.
+</h3>
+<p>
+<strong>Text Segmentation</strong> attempts to determine boundaries
+between topics in long documents by dividing the document text into
+<em>text segments</em>.  Each segment comprises a consecutive
+sequence of sentences or paragraphs sharing a coherent topic.
+</p>
+
+<p>
+All MorphAdorner segmenters must implement the
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.textsegmenter.TextSegmenter}
+interface.  The
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.textsegmenter.TextSegmenterFactory}
+provides the mechanism for instantiating a default or specified instance
+of a segmenter implementation.
+</p>
+
+<p>
+MorphAdorner includes two text segmenters, both based upon
+code written by Freddy Choi.
+</p>
+
+<ul>
+   <li>C99, created by Freddy Choi.</li>
+   <li>TextTiler, created by Marti Hearst.</li>
+</ul>
+</body>
+</html>
+

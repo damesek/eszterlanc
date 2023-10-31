@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>
+FindTEITextLanguage.
+</title>
+</head>
+<body>
+<p>
+Determines the language(s) in which a TEI text is written.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.findteitextlanguage output.tab input1.xml input2.xml ...
+</pre>
+</blockquote>
+<p>
+output.tab -- output tab-separated values file described below.<br />
+input*.xml -- input TEI XML files whose language is to be found.<br />
+</p>
+<p>
+The output file is a tab-delimited utf-8 text file containing the
+following fields, in order.
+</p>
+<ol>
+<li>The original XML file name.</li>
+<li>The length of the plain text from the TEI file, ignoring XML markup,
+    in characters.</li>
+<li>The most likely language.</li>
+<li>The language recognizer score for the most likely language.</li>
+<li>The second most likely language.</li>
+<li>The language recognizer score for the second most likely language.</li>
+<li>The third most likely language.</li>
+<li>The language recognizer score for the third most likely language.</li>
+</ol>
+</p>
+<p>
+Texts which do not have at least three recognizable languages will
+have missing language names set to blank with a score of zero.
+</p>
+<p>
+Language recognizer scores range from 0.0 (not a match) to 1.0 (perfect
+match).
+</p>
+</body>
+</html>
+

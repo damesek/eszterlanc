@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>
+Overview of spellingstandardizer package.
+</title>
+</head>
+<body>
+
+<h3>
+Spelling standardization.
+</h3>
+
+<p>
+English texts of the past exhibit far greater spelling variance than
+contemporary texts. Texts from the seventeenth century and earlier times
+use conventions that differ from contemporary standards in the use of "u"
+and "v" and "y" and capitalization, among others. Often the same words is
+spelled differently even within the same work. By the eighteenth-century
+texts employ much more modern orthographic standards, except for
+capitalization.
+</p>
+
+<p>
+MorphAdorner uses rules, word lists, and extended search techniques
+such as spelling correction methods and other heuristics to map variant
+spellings to their standard (usually modern) form. For obsolete words no
+longer in use, a representative standard form is chosen which is usually
+the Oxford English Dictionary headword form. Presently MorphAdorner knows
+about 336,000 variant spellings. Using this list, MorphAdorner can
+automatically determine the correct standard form for previously unseen
+spellings in many cases.
+</p>
+
+<p>
+Sometimes a new spelling is just too different from any of the ones
+MorphAdorner already knows. Using the extended search facilities on such a
+spelling may result in a "standard spelling" which veers far from the
+correct form. As time goes one we hope to reduce the occurrence of such
+errors.
+</p>
+
+<p>
+Orthographic standardization improves the quality of part-of-speech
+tagging, name recognition, and text searching. However, standardization by
+itself isn't sufficient to fix some other problems. These include the lack
+of the apostrophe to mark the possessive case and the inconsistent
+practices of capitalization as markers of proper nouns.
+</p>
+
+<p>
+All MorphAdorner spelling standardizers must implement the
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.spellingstandardizer.SpellingStandardizer}
+interface.  The
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.spellingstandardizer.SpellingStandardizerFactory}
+provides the mechanism for instantiating a default or specified instance
+of a SpellingStandardizer implementation.
+The {@link edu.northwestern.at.morphadorner.corpuslinguistics.spellingstandardizer.AbstractSpellingStandardizer}
+serves as a base class for deriving concrete implementations of
+spelling standardizers.
+</p>
+
+</body>
+</html>
+

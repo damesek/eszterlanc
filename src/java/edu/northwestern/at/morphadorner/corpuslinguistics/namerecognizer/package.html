@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>
+Overview of namerecognizer package.
+</title>
+</head>
+<body>
+<p>
+Finds named entities in text.
+</p>
+<p>
+Literary texts are filled with names of people and places.
+MorphAdorner includes a simple name recognizer for extracting names to
+allow building lists of characters and geographical settings.  MorphAdorner
+uses simple rule-based pattern recognition methods along with
+proper name word lists and gazeteers to locate probable names in
+a text.
+</p>
+<p>
+All MorphAdorner name recognizers must implement the
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.namerecognizer.NameRecognizer}
+interface.  The
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.namerecognizer.NameRecognizerFactory}
+provides the mechanism for instantiating a default or specified instance
+of a name recognizer implementation.
+You may extend the
+{@link edu.northwestern.at.morphadorner.corpuslinguistics.namerecognizer.AbstractNameRecognizer}
+to create a new name recognizer.
+</p>
+</body>
+</html>
+

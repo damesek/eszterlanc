@@ -1,0 +1,208 @@
+adjective:
+          fu'    ful
+          sser    ss
+          ffer    ff
+          ller    ll
+           ler    le
+          pler   ple
+          CCer     C
+           ier     y
+           wer     w
+         CVCer  CVCe
+         VRCer  VRCe
+           eer    ee
+            er
+         ssest    ss
+         ffest    ff
+         llest    ll
+         plest   ple
+         CCest     C
+          iest     y
+          west     w
+        CVCest  CVCe
+        VRCest  VRCe
+          eest    ee
+           est
+adverb:
+          bly    ble
+	  ily      y
+	   ly
+verb:
+      >1  ches    ch
+          ches    che
+          shes    sh
+          sses    ss
+          ffest    ff
+      <5  llest    ll
+          ssest    ss
+          CCest     C
+           cest    ce
+           gest    ge
+         Vthest  Vthe
+         VVlest   VVl
+          rlest    rl
+          wlest    wl
+           lest    le
+          enest    en
+          onest    on
+          erest    er
+           sest    se
+         iatest  iate
+          itest    it
+           vest    ve
+           west     w
+           xest     x
+           zest    ze
+         uVCest  uVCe
+         CVCest  CVCe
+          Crest  Cer
+           est
+           eeth  ee
+          ffeth    ff
+      <5  lleth    ll
+          sseth    ss
+          CCeth     C
+           ceth    ce
+           geth    ge
+         Vtheth  Vthe
+         VVleth   VVl
+          rleth    rl
+          wleth    wl
+           leth    le
+          eneth    en
+          oneth    on
+          ereth    er
+           seth    se
+         iateth  iate
+          iteth    it
+           veth    ve
+           weth     w
+           xeth     x
+           zeth    ze
+         uVCeth  uVCe
+         CVCeth  CVCe
+          Creth  Cer
+          eth
+      >1   ies     y
+           xes     x
+            ss    ss!
+             s
+          went    go
+          tred    tre
+           ead   ead
+      >1   ied     y
+           yed     y
+           Ved    Ve
+          ffed    ff
+      <4  lled    ll
+          ssed    ss
+          CCed     C
+           ced    ce
+           ged    ge
+         Vthed  Vthe
+         VVled   VVl
+          rled    rl
+          wled    wl
+           led    le
+          ened    en
+          oned    on
+        + ored    ore
+          ored    or
+        + ered    ere
+          ered    er
+           sed    se
+         iated  iate
+          ited    it
+           ved    ve
+           wed     w
+           xed     x
+           zed    ze
+         uVCed  uVCe
+         CVCed  CVCe
+            ed
+           aid    ay
+          fell  fall
+          gone    go
+          iven    ve
+            wn     w
+         ffing    ff
+      <4 lling    ll
+         ssing    ss
+         CCing     C
+          cing    ce
+         nging    ng
+          ging    ge
+        Vthing   the
+         rling    rl
+         wling    wl
+        VVling   VVl
+         Vling    Vl
+          ling    le
+         ening    en
+         oning    on
+       + oring    ore
+         oring    or
+       + ering    ere
+         ering    er
+          sing    se
+        iating  iate
+         iting    it
+          uing    ue
+          ving    ve
+          wing     w
+          xing     x
+      >1  ying     y
+          ying    ie
+          zing    ze
+        uVCing  uVCe
+        CVCing  CVCe
+      >1  -ing
+      >1   ing
+         ffin'    ff
+      <4 llin'    ll
+         ssin'    ss
+         CCin'     C
+          cin'    ce
+         ngin'    ng
+          gin'    ge
+        Vthin'   the
+         rlin'    rl
+         wlin'    wl
+        VVlin'   VVl
+          lin'    le
+         enin'    en
+         onin'    on
+       + orin'    ore
+         orin'    or
+       + erin'    ere
+         erin'    er
+          sin'    se
+        iatin'  iate
+         itin'    it
+          uin'    ue
+          vin'    ve
+          win'     w
+          xin'     x
+      >1  yin'     y
+          yin'    ie
+          zin'    ze
+        uVCin'  uVCe
+        CVCin'  CVCe
+      >1   in'
+           'st
+           n't
+noun:
+           men   man
+          ches    che
+          shes    sh
+      >1   ies     y
+          sses    ss
+           xes     x
+            's
+             s'    s
+             s
+             '
+noun-possessive:
+            's
+             s'    s
+             '

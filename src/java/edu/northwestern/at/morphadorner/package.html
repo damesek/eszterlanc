@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+MorphAdorner.
+</title>
+</head>
+<body>
+<p>
+MorphAdorner adorns texts with word-based morphological information
+such as parts of speech and lemmata.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java -jar MorphAdorner.jar files-or-urls
+<pre>
+</blockquote>
+<p>
+where <strong>files-or-urls</strong> is a list of one or more
+input files or URLs containing text to tag.
+</p>
+<p>
+For example, to tag text in the file <em>mytext.txt</em>, write:
+</p>
+<blockquote>
+<pre>
+java -jar MorphAdorner.jar mytext.txt
+</pre>
+</blockquote>
+<p>
+To tag a web page:
+</p>
+<blockquote>
+<pre>
+java -jar MorphAdorner.jar http://www.northwestern.edu
+</pre>
+</blockquote>
+<p>
+Adorned output files are written by default to the subdirectory
+<strong>adorned/</strong>
+below your current directory.
+</p>
+<p>
+To change the output directory:
+</p>
+<blockquote>
+<pre>
+java -jar MorphAdorner.jar /o=/myoutputdirectory/ mytext.txt
+</pre>
+</blockquote>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+CountAffixes.
+</title>
+</head>
+<body>
+<p>
+Counts affixes (suffixes and prefixes) of adorned words by processing MorphAdorner XML output.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.countaffixes.CountAffixes input.xml prefixes.tab suffixes.tab
+</pre>
+</blockquote>
+<p>
+input.xml -- input XML file produced as output by MorphAdorner.<br />
+prefixes.tab -- output tab-separated prefixes file described below.<br />
+suffixes.tab -- output tab-separated suffixes file described below.<br />
+</p>
+<p>
+Both the prefixes.tab and suffixes.tab output files contain two
+tab-separated columns.  The first column is a prefix or suffix string,
+respectively, and the second column contains the count of the number
+of times that prefix or suffix occurred in the unique words in the
+input.xml file.
+</p>
+</body>
+</html>
+

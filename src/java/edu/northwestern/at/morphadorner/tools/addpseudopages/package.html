@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>
+AddPseudoPages.
+</title>
+</head>
+<body>
+<p>
+Adds pseudopage milestones to an adorned file.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.addpseudopages.AddPseudoPages input.xml output.xml pseudopagesize pageendingdivtypes
+</pre>
+</blockquote>
+<table>
+<tr>
+<td>input.xml</td><td>Input MorphAdorned XML file.</td>
+</tr>
+<tr>
+<td>output.xml</td>
+<td>Derived adorned file with pseudopage milestones added.
+N.B. Existing pseudopage milestones are deleted before the new ones are added.
+</td>
+<tr>
+<td>pseudopagesize</td>
+<td>The maximum number of words in each pseudopage.  Default: 300 .
+</td>
+</tr>
+<tr>
+<td>pageendingdivtypes</td>
+<td>Blank separated list of &lt;div&gt; types which force the closure of
+a pseudopage.  Default: chapter volume sermon
+</td>
+</tr>
+</table>
+<p>
+The derived adorned output file <em>output.xml</em> has pseudopage milestone
+elements added approximately every <em>pseudopagesize</em> words.
+No distinction is made between main and paratext when generating
+the pseudopages.  Each pseudopage starts with a milestone of the form:
+</p>
+<p>
+<blockquote>
+&lt;milestone unit="pseudopage" n="<em>n</em>" position="start"&gt;&lt;/milestone&gt;
+</blockquote>
+</p>
+<p>
+and ends with a milestone element of the form:
+</p>
+<p>
+<blockquote>
+&lt;milestone unit="pseudopage" n="<em>n</em>" position="end"&gt;&lt;/milestone&gt;
+</blockquote>
+</p>
+<p>
+The <em>n</em> is the pseudopage number.
+</p>
+</body>
+</html>
+

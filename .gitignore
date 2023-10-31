@@ -1,34 +1,45 @@
-/target
-/classes
-/checkouts
+# Build and Leiningen files
+target/
+classes/
+checkouts/
 profiles.clj
 pom.xml
 pom.xml.asc
 *.jar
 *.class
-/.lein-*
-/.nrepl-port
-/.prepl-port
+.lein-*
+.nrepl-port
+.prepl-port
+
+# Version control
 .hgignore
 .hg/
 
+# IDE files
+.idea/
+*.iml
+.shadow-cljs
 
-/.idea
-/.cpcache
-/USB
-/data
+# Cache and temporary files
+.cpcache/
 .DS_Store
+
+# Specific folders
+USB/
+data/
+node_modules/s
+public/
+
+# Java source
+src/java/
+
+# Specific file types
 *.json
 !package.json
 *.csv
 *.numbers
 *.xlsx
 *.sql
-.shadow-cljs
-/node_modules
-/public
-*.iml
 yarn.lock
-
 *.dic
 *.aff

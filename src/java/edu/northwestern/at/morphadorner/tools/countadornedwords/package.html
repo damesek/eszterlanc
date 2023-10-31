@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>
+CountAdornedWords.
+</title>
+</head>
+<body>
+<p>
+Counts adorned words by processing XMLToTab output.
+</p>
+<p>
+Usage:
+</p>
+<blockquote>
+<pre>
+java edu.northwestern.at.morphadorner.tools.countadornedwords.CountAdornedWords output.tab input1.tab input2.tab ...
+</pre>
+</blockquote>
+<p>
+output.tab -- output tab-separated values file described below.<br />
+input*.tab -- input tabbed files produced as output by XMLToTab.<br />
+</p>
+<p>
+The output file is a tab-delimited utf-8 text file containing the
+following fields, in order.
+</p>
+<ol>
+<li>Short work name, formed from input file name by stripping the path
+    and file extension.</li>
+<li>The corrected original spelling.</li>
+<li>The standard spelling.</li>
+<li>The parts of speech.</li>
+<li>The lemmata.</li>
+<li>The count of the tuple (work name, corrected spelling,
+    standard spelling, parts of speech, lemmata).</li>
+</ol>
+</body>
+</html>
+
