@@ -29,13 +29,13 @@ java -Xmx2G -jar magyarlanc-3.0.jar -mode depparse -input in.txt -output out.txt
 Leiningen:
 
 ```angular2html
-[org.clojars.baader/eszterlanc "0.3.1"]
+[org.clojars.baader/eszterlanc "0.3.2"]
 ```
 
 Clojure CLI/deps.edn
 
 ```angular2html
-org.clojars.baader/eszterlanc {:mvn/version "0.3.1"}
+org.clojars.baader/eszterlanc {:mvn/version "0.3.2"}
 ```
 
 # initialize
