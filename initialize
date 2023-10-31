@@ -8,7 +8,7 @@
 
 # Set the URL and target directory
 URL="https://eszterlanc.s3.amazonaws.com/magyarlanc-3_0.zip"
-TARGET_DIR="src/java"
+TARGET_DIR="./"
 
 # Create the target directory if it doesn't exist
 mkdir -p $TARGET_DIR

@@ -1,8 +1,0 @@
-^-?[0-9]+(.[0-9]+)?$	cd
-^(The|the|A|a|An|an)$	at
-un.*	jj
-.*\’s$	nn$
-.*s$	nns
-.*ing$	vbg
-.*ed$	vbd
-.*	nn

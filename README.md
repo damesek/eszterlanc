@@ -38,32 +38,21 @@ Clojure CLI/deps.edn
 org.clojars.baader/eszterlanc {:mvn/version "0.3.0"}
 ```
 
-## Init (important!)
+# initialize
 
-### Using this repository
+The Magyarlanc model files are large to Clojars, so I've uploaded them to an S3 bucket. 
 
-If you would like to use this repository, do you need to download magyarlanc-3.0.jar file from https://rgai.inf.u-szeged.hu/magyarlanc site and add to the lib folder.
+## auto
 
-```bash
-.
-├── CHANGELOG.md
-├── LICENSE
-├── README.md
-├── bin
-│   └── kaocha
-├── doc
-│   └── intro.md
-├── eszterlanc.iml
-├── lib
-│   └── magyarlanc-3.0.jar <<<------------ put here the jar file
-```
+Run the initialize shell script. This will download and unzip the entire folder for you.
 
-### Using via Clojars (maven)
+## manually
 
-!! That is important, because the file is too large. I can't upload to Clojars.
+Please download the file from the following link: https://eszterlanc.s3.amazonaws.com/magyarlanc-3_0.zip.
+Unzip it in the root directory, and it will be placed in the src/java folder for you.
 
-Do you need to download from https://drive.google.com/file/d/1AUcEjCgVqAVXPTqEzXAuSXgx10GDyxYx/view?usp=sharing the magyarlanc-3.0.zip file.
-Do you need to unzip to "src/java" folder and add to project.clj the source. Example:
+In project.clj, please add the Java source path.
+
 
 ```clojure 
 (defproject eszterlanc-test "0.1.0-SNAPSHOT"
@@ -76,7 +65,6 @@ Do you need to unzip to "src/java" folder and add to project.clj the source. Exa
             :java-source-paths ["src/java"]
             :repl-options {:init-ns eszterlanc-test.core})
 ```
-Test repository: https://github.com/damesek/eszterlanc-test
 
 ## GUI
 
