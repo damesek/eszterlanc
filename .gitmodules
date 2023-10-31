@@ -1,0 +1,3 @@
+[submodule "example-project"]
+	path = example-project
+	url = https://github.com/damesek/eszterlanc-test.git
