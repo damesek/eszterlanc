@@ -79,19 +79,19 @@ In project.clj, please add the Java source path.
 
 GUI namespace functions:
 
-- [**save-image-berkley**](): on the picture, the right graph
-- [**save-image-whatswrong**](): on the picture, the left graph
-- [**save-image-to-resources**](): save both image
+- [**save-image-berkley**](#save-image-berkley): on the picture, the right graph
+- [**save-image-whatswrong**](#save-image-whatswrong): on the picture, the left graph
+- [**save-image-to-resources**](#save-image-to-resources): save both image
 
 ## FUNCTIONS
 
-- [**lemma-for-word**](https://github.com/damesek/eszterlanc#lemma-for-word): get a word lemma
-- [**sentence-array**](https://github.com/damesek/eszterlanc#sentences-into-arrays): split strings into sentence arrays
-- [**object->clj**](https://github.com/damesek/eszterlanc#helper-object-clj): helper-fn
-- [**morphology**](https://github.com/damesek/eszterlanc#morphology): Morphological parser (from/via morphdb.hu) 
-- [**dependency**](https://github.com/damesek/eszterlanc#dependency): Google Mate-tools Analysis adapted to Hungarian
-- [**constituency**](https://github.com/damesek/eszterlanc#constituency): Berkley parser adapted to Hungarian
-- [**magyarlanc**](https://github.com/damesek/eszterlanc#access-to-all-magyarlanc): Magyarlanc funcionality (all-in-one)
+- [**lemma-for-word**](#lemma-for-word): get a word lemma
+- [**sentence-array**](#sentences-into-arrays): split strings into sentence arrays
+- [**object->clj**](#helper-object-clj): helper-fn
+- [**morphology**](#morphology): Morphological parser (from/via morphdb.hu) 
+- [**dependency**](#dependency): Google Mate-tools Analysis adapted to Hungarian
+- [**constituency**](#constituency): Berkley parser adapted to Hungarian
+- [**magyarlanc**](#access-to-all-magyarlanc): Magyarlanc funcionality (all-in-one)
 
 ### Init
 
