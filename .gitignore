@@ -11,6 +11,7 @@ pom.xml.asc
 .nrepl-port
 .prepl-port
 .clj-kondo/
+.clj-kondo/.cache/
 
 # Version control
 .hgignore
