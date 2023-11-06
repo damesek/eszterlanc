@@ -24,18 +24,18 @@ java -Xmx2G -jar magyarlanc-3.0.jar -mode depparse -input in.txt -output out.txt
 
 ## Usage
 
-[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.baader/eszterlanc.svg)](https://clojars.org/org.clojars.baader/eszterlanc)
+[![Clojars Project](https://img.shields.io/clojars/v/hu.baader/eszterlanc.svg?include_prereleases)](https://clojars.org/hu.baader/eszterlanc)
 
 Leiningen:
 
 ```angular2html
-[org.clojars.baader/eszterlanc "0.3.2"]
+[hu.baader/eszterlanc "0.3.3"]
 ```
 
 Clojure CLI/deps.edn
 
 ```angular2html
-org.clojars.baader/eszterlanc {:mvn/version "0.3.2"}
+implementation("hu.baader:eszterlanc:0.3.3")
 ```
 
 # initialize
