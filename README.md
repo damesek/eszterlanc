@@ -48,7 +48,7 @@ Please execute the initialization shell script to complete this process.
 `./initialize`
 
 You will find the JAR file located within the lib directory.
-Add to project `mta.szta.rgai/magyarlanc` and `org.clojars.baader/eszterlanc`.
+Add to project `mta.szta.rgai/magyarlanc` and `hu.baader/eszterlanc`.
 
 As see in the example project:
 
@@ -59,7 +59,7 @@ As see in the example project:
             :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
                       :url "https://www.eclipse.org/legal/epl-2.0/"}
             :dependencies [[org.clojure/clojure "1.11.1"]
-                           [org.clojars.baader/eszterlanc "0.3.0"]
+                           [hu.baader/eszterlanc "0.3.3"]
                            [mta.szte.rgai/magyarlanc "0.3.0"]]
             :repl-options {:init-ns eszterlanc-test.core})
 ```
