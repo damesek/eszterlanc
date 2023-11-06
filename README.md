@@ -63,6 +63,10 @@ As see in the example project:
                            [mta.szte.rgai/magyarlanc "0.3.0"]]
             :repl-options {:init-ns eszterlanc-test.core})
 ```
+### todo
+
+- S3 Maven bucket for easier usage
+
 ## GUI
 
 ### Access to GUI
