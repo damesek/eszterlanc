@@ -1,29 +1,48 @@
 #!/bin/bash
 
-####################################################
-#                                                  #
-# Download magyarlanc lib and add to this project. #
-#                                                  # 
-####################################################
+echo  "####################################################"
+echo  "#                                                  #"
+echo  "#      Download MTA-SZTE RGAI magyarlanc lib.      #"
+echo  "#                                                  #"
+echo  "####################################################"
+echo  " "
+echo  " "
 
 # Set the URL and target directory
-URL="https://eszterlanc.s3.amazonaws.com/magyarlanc-3_0.zip"
-TARGET_DIR="./"
+URL="https://eszterlanc.s3.amazonaws.com/magyarlanc-3.0.jar"
+TARGET_DIR="lib"
 
 # Create the target directory if it doesn't exist
 mkdir -p $TARGET_DIR
 
-# Navigate to the target directory
-cd $TARGET_DIR
 
 # Download the file using wget
 wget --progress=bar:force -c $URL
 
-# Unzip the downloaded file
-unzip magyarlanc-3_0.zip
+echo "####################################################"
+echo "#                                                  #"
+echo "#        I add to local Maven repository as:       #"
+echo "#          mta.szte.rgai/magyarlanc 0.3.0          #"
+echo "#                                                  #"
+echo "####################################################"
+echo " "
+echo " "
 
-# Optionally, remove the zip file after extraction
-rm magyarlanc-3_0.zip
+# Move to the target directory
+mv magyarlanc-3.0.jar $TARGET_DIR/
 
-echo "Download and extraction complete."
+# install to local Maven repository -> .m2
+mvn install:install-file \
+  -Dfile=lib/magyarlanc-3.0.jar \
+  -DgroupId=mta.szte.rgai \
+  -DartifactId=magyarlanc \
+  -Dversion=0.3.0 \
+  -Dpackaging=jar \
+  -DgeneratePom=true
 
+
+echo  "####################################################"
+echo  "#                                                  #"
+echo  "#             Successfully added!                  #"
+echo  "#                                                  #"
+echo  "####################################################"

@@ -40,19 +40,15 @@ org.clojars.baader/eszterlanc {:mvn/version "0.3.2"}
 
 # initialize
 
-The Magyarlanc model files are large to Clojars, so I've uploaded them to an S3 bucket. 
+On 2023-11-06, I updated the initialization script.
 
-## auto
+The script installs the MTA-SZTA Magyarlanc JAR file to the local Maven repository.
+Please execute the initialization shell script to complete this process.
 
-Run the initialize shell script. This will download and unzip the entire folder for you.
+`./initialize`
 
-## manually
-
-Please download the file from the following link: https://eszterlanc.s3.amazonaws.com/magyarlanc-3_0.zip.
-Unzip it in the root directory, and it will be placed in the src/java folder for you.
-
-In project.clj, please add the Java source path.
-
+You will find the JAR file located within the lib directory.
+Add to project `mta.szta.rgai/magyarlanc` and `org.clojars.baader/eszterlanc`.
 
 ```clojure 
 (defproject eszterlanc-test "0.1.0-SNAPSHOT"
@@ -61,11 +57,10 @@ In project.clj, please add the Java source path.
             :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
                       :url "https://www.eclipse.org/legal/epl-2.0/"}
             :dependencies [[org.clojure/clojure "1.11.1"]
-                           [org.clojars.baader/eszterlanc "0.3.0"]]
-            :java-source-paths ["src/java"]
+                           [org.clojars.baader/eszterlanc "0.3.0"]
+                           [mta.szte.rgai/magyarlanc "0.3.0"]]
             :repl-options {:init-ns eszterlanc-test.core})
 ```
-
 ## GUI
 
 ### Access to GUI
