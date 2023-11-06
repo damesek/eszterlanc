@@ -35,7 +35,7 @@ Leiningen:
 Clojure CLI/deps.edn
 
 ```angular2html
-implementation("hu.baader:eszterlanc:0.3.3")
+hu.baader/eszterlanc {:mvn/version "0.3.3"}
 ```
 
 # initialize
@@ -49,6 +49,8 @@ Please execute the initialization shell script to complete this process.
 
 You will find the JAR file located within the lib directory.
 Add to project `mta.szta.rgai/magyarlanc` and `org.clojars.baader/eszterlanc`.
+
+As see in the example project:
 
 ```clojure 
 (defproject eszterlanc-test "0.1.0-SNAPSHOT"
